@@ -1,0 +1,43 @@
+### Useful Commands:
+
+Check I have no changes:
+
+    p4 opened
+    
+Sync to head:
+
+    p4 sync 
+
+To list all changelists
+
+    p4 changes -umjarvis
+
+To list files changed by a changelist (-s omits diffs and -S lists and diff the files that are shelved)
+
+    p4 describe #changelist
+
+To edit a changelist description:
+
+    p4 change #changelist
+
+###Typical Workflow
+
+Open file for editing in default changelist.
+
+    p4 edit filename 
+   
+Add new files to default changelist   
+
+    p4 add filename
+    
+Write code
+
+Create changelist (changelist number C1 is returned)
+
+    p4 change
+    
+Submit code review etc..
+
+Submit changelist
+
+    p4 submit -c <C1> - Submit changes
