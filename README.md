@@ -1,2 +1,3 @@
 # Cheetsheets
-Useful commands and configuration files
+Repo used for storing useful commands & configuration files.
+Feel free to refer but make necessary changes as per your needs! 
