@@ -1,12 +1,24 @@
-colorscheme torte       " awesome colorscheme
-syntax enable           " enable syntax processing
-syntax on               " enable syntax processing
-set tabstop=4           " number of visual spaces per TAB
-set softtabstop=4       " number of spaces in tab when editing
-set expandtab           " tabs are spaces
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set showmatch           " highlight matching [{()}]
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set expandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
 
+syntax enable       " enable syntax processing
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=0   " number of spaces in tab when editing
+set expandtab       " tabs are spaces
+set number          " show line numbers
+set showcmd         " show command in bottom bar
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
+set autoindent      " copy indent from current line when starting a new line
+set shiftwidth=4
+ 
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+set ruler         " show line and column number
+syntax on         " syntax highlighting
+set showcmd       " show (partial) command in status line
+colorscheme spring-night " color scheme                            
